@@ -9,5 +9,4 @@ public class MashUpApplication {
     public static void main(String[] args) {
         SpringApplication.run(MashUpApplication.class, args);
     }
-
 }
