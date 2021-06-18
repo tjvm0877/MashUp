@@ -21,6 +21,7 @@ public class Board {
     private String content;
     private Integer headcount;
     private Integer max;
+    private Integer category;
 
     @CreationTimestamp
     private Timestamp createdate;

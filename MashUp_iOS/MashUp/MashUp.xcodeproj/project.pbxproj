@@ -3,13 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D24E7A75267C1FE200BE9BD6 /* BoardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24E7A74267C1FE200BE9BD6 /* BoardsVC.swift */; };
+		D24E7A77267C2E1E00BE9BD6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24E7A76267C2E1E00BE9BD6 /* Model.swift */; };
+		D24E7A79267C486300BE9BD6 /* CreateBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24E7A78267C486300BE9BD6 /* CreateBoardVC.swift */; };
+		D24E7A7B267C662800BE9BD6 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24E7A7A267C662800BE9BD6 /* DetailVC.swift */; };
 		D28A5B01266F534B000FA8AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28A5B00266F534B000FA8AB /* AppDelegate.swift */; };
 		D28A5B03266F534B000FA8AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28A5B02266F534B000FA8AB /* SceneDelegate.swift */; };
-		D28A5B05266F534B000FA8AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28A5B04266F534B000FA8AB /* ViewController.swift */; };
+		D28A5B05266F534B000FA8AB /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28A5B04266F534B000FA8AB /* MainVC.swift */; };
 		D28A5B08266F534B000FA8AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28A5B06266F534B000FA8AB /* Main.storyboard */; };
 		D28A5B0A266F534C000FA8AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28A5B09266F534C000FA8AB /* Assets.xcassets */; };
 		D28A5B0D266F534C000FA8AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28A5B0B266F534C000FA8AB /* LaunchScreen.storyboard */; };
@@ -20,10 +24,14 @@
 		242927B79C1FE95E0BDB1160 /* Pods-MashUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MashUp.debug.xcconfig"; path = "Target Support Files/Pods-MashUp/Pods-MashUp.debug.xcconfig"; sourceTree = "<group>"; };
 		AACB1E106927E044A87661F3 /* Pods_MashUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MashUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB06DFB1B72B6F92B5897620 /* Pods-MashUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MashUp.release.xcconfig"; path = "Target Support Files/Pods-MashUp/Pods-MashUp.release.xcconfig"; sourceTree = "<group>"; };
+		D24E7A74267C1FE200BE9BD6 /* BoardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsVC.swift; sourceTree = "<group>"; };
+		D24E7A76267C2E1E00BE9BD6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D24E7A78267C486300BE9BD6 /* CreateBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBoardVC.swift; sourceTree = "<group>"; };
+		D24E7A7A267C662800BE9BD6 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		D28A5AFD266F534B000FA8AB /* MashUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MashUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28A5B00266F534B000FA8AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D28A5B02266F534B000FA8AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D28A5B04266F534B000FA8AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D28A5B04266F534B000FA8AB /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D28A5B07266F534B000FA8AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D28A5B09266F534C000FA8AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D28A5B0C266F534C000FA8AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,7 +64,6 @@
 				242927B79C1FE95E0BDB1160 /* Pods-MashUp.debug.xcconfig */,
 				AB06DFB1B72B6F92B5897620 /* Pods-MashUp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,8 +90,12 @@
 			children = (
 				D28A5B00266F534B000FA8AB /* AppDelegate.swift */,
 				D28A5B02266F534B000FA8AB /* SceneDelegate.swift */,
-				D28A5B04266F534B000FA8AB /* ViewController.swift */,
+				D28A5B04266F534B000FA8AB /* MainVC.swift */,
+				D24E7A78267C486300BE9BD6 /* CreateBoardVC.swift */,
+				D24E7A74267C1FE200BE9BD6 /* BoardsVC.swift */,
+				D24E7A76267C2E1E00BE9BD6 /* Model.swift */,
 				D28A5B06266F534B000FA8AB /* Main.storyboard */,
+				D24E7A7A267C662800BE9BD6 /* DetailVC.swift */,
 				D28A5B09266F534C000FA8AB /* Assets.xcassets */,
 				D28A5B0B266F534C000FA8AB /* LaunchScreen.storyboard */,
 				D28A5B0E266F534C000FA8AB /* Info.plist */,
@@ -206,9 +217,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D28A5B05266F534B000FA8AB /* ViewController.swift in Sources */,
+				D24E7A79267C486300BE9BD6 /* CreateBoardVC.swift in Sources */,
+				D24E7A77267C2E1E00BE9BD6 /* Model.swift in Sources */,
+				D28A5B05266F534B000FA8AB /* MainVC.swift in Sources */,
+				D24E7A75267C1FE200BE9BD6 /* BoardsVC.swift in Sources */,
 				D28A5B01266F534B000FA8AB /* AppDelegate.swift in Sources */,
 				D28A5B03266F534B000FA8AB /* SceneDelegate.swift in Sources */,
+				D24E7A7B267C662800BE9BD6 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

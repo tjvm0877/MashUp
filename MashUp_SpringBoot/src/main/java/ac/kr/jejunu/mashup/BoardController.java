@@ -12,7 +12,7 @@ public class BoardController {
     @Autowired BoardRepository boardRepository;
 
     @GetMapping(value = "/get/{id}")
-    public Board get(@PathVariable int id) {
+    public Board getById(@PathVariable int id) {
         return boardRepository.findById(id).get();
     }
 
@@ -20,6 +20,10 @@ public class BoardController {
     public List<Board> list() {
         return boardRepository.findAll();
     }
+
+    @GetMapping(value = "/get/category/{category}")
+    public List<Board> list(@PathVariable int category) {
+        return boardRepository.findByCategory(category); }
 
     @PostMapping(value = "/post")
     public void save(@ModelAttribute Board board) {
