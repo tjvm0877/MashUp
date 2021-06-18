@@ -82,38 +82,32 @@ class CreateBoardVC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate
     @IBAction func upload(_ sender: Any) {
         let url = "http://localhost:8080/board/post"
 //        let url = "https://ptsv2.com/t/7970f-1623995609/post"
-        var request = URLRequest(url: URL(string: url)!)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.timeoutInterval = 10
 
         let postTitle:String = mashupTitle.text!
-        let postcontent:String = mashupTitle.text!
-//        let postheadcount:String = maxheadCount.text!
-//        let postcategory:Int = 1
-//        let postmax = mashupTitle.text
+        let postcontent:String = mashupContent.text!
+        let postheadcount:String = maxheadCount.text!
+        let postcategory:Int = selectedpicker
+        let postmax = maxheadCount.text!
         
-        let param = ["title" : "test",
-                     "content" : postcontent,
-                     "headcount":"3",
-                     "max" : "1",
-                     "category" : "1"]
+//        let param = Contact.init(id: 3, title: "dd", content: "dd", headcount: 2, max: 2, createdate: "dd", category: 1)
         
-        do {
-            try request.httpBody = JSONSerialization.data(withJSONObject: param, options: [])
-        } catch {
-            print("http err")
-        }
-        
-        AF.request(request).responseString{ (response) in
-            switch response.result{
-            case .success:
-                print("bb")
+        let param = ["title" : "\(postTitle)",
+                     "content" : "\(postcontent)",
+                     "headcount":"\(postheadcount)",
+                     "max" : "\(postmax)",
+                     "category" : "\(postcategory)"]
+
+        AF.request(url,
+                   method: .post,
+                   parameters: param,
+                   
+                   encoder: JSONParameterEncoder.default,
+                   headers: nil
+        )
+//                   encoding: JSONEncoding.default)
+            .responseString{ (response) in
+                print(param, url)
                 self.navigationController?.popViewController(animated: true)
-                
-            case .failure(let err):
-                print(err.localizedDescription)
-            }
         }
     }
 }

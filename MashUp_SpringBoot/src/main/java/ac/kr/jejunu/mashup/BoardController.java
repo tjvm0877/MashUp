@@ -26,7 +26,8 @@ public class BoardController {
         return boardRepository.findByCategory(category); }
 
     @PostMapping(value = "/post")
-    public void save(@ModelAttribute Board board) {
+    public void save(@RequestBody Board board) {
+        System.out.println(board.toString());
         Board check = boardRepository.save(board);
         System.out.println(check);
     }
